@@ -1,0 +1,22 @@
+Student can have 
+ID , 
+firstName,
+LastName,
+email,
+Gender
+
+Attendance should have 
+Date, 
+Status (enum: present or absent), 
+
+1) Create a new student //createStudent
+2) Get a student by ID  // getStudentByID
+3) Get all the students Data //getAllStudents
+4) Update the student data by ID //updateStudent
+5) Delete a student by ID //deleteStudent
+
+1) Get the attendance of all students on a particular date 
+2) Get the attendance of student by ID for all dates 
+3) Create the attendance for a student on a particular date 
+4) Update the status of attendance for a student by ID on a particular date.
+5) Delete the attendance for a student on particular date.

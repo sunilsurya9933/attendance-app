@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "6a22bbec-6e92-45fc-864e-e36cab966d2d",
+		"name": "attendance-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "19317204"
+	},
+	"item": [
+		{
+			"name": "createStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "firstName",
+							"value": "Floby V",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Andrews",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "flobyandrews@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "Female",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/students"
+			},
+			"response": []
+		},
+		{
+			"name": "getStudentByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/students/66852cf0ff245030715a71db"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllStudents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/students"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteStudent",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/students/668530d1431fa47700a8acad"
+			},
+			"response": [
+				{
+					"name": "firstDelete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/students/668530d1431fa47700a8acad"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "124"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7c-PveGkCRDPSThPPNoBdOnyOkj4b4\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Jul 2024 11:16:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"668530d1431fa47700a8acad\",\n    \"firstName\": \"Ram\",\n    \"lastName\": \"Patil\",\n    \"email\": \"rampatil@gmail.com\",\n    \"gender\": \"Male\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "updateStudent",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "firstName",
+							"value": "Floby Vk",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Andrews",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "flobyandrews@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "Female",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/students/66853136431fa47700a8acb5"
+			},
+			"response": []
+		},
+		{
+			"name": "createAttendance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "date",
+							"value": "2024-07-03T00:00:00.000Z",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "present",
+							"type": "text"
+						},
+						{
+							"key": "student",
+							"value": "66852cf0ff245030715a71db",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/attendance"
+			},
+			"response": []
+		},
+		{
+			"name": "getAttendanceByStudentId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/attendance/student/66852cf0ff245030715a71db"
+			},
+			"response": []
+		},
+		{
+			"name": "getAttendanceByDate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/attendance/date/2024-07-03T00:00:00.000Z"
+			},
+			"response": []
+		}
+	]
+}
